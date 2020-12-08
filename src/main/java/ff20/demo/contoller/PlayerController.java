@@ -49,9 +49,9 @@ public class PlayerController {
     }
 
     @GetMapping("/deletePlayer")
-    public String delelePlayer(Model model){
+    public String deletePlayer(Model model){
         model.addAttribute("players", playerRepository.findAll());
-        return "delelePlayer";
+        return "deletePlayer";
     }
 
     @GetMapping("/verifyDelete")

@@ -51,6 +51,12 @@ public class AdminController {
         return "index";
     }
 
+    @GetMapping("/adminPlayer")
+    public String adminPlayer(){
+
+        return "adminPlayers";
+    }
+
 
 
 

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Players</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -12,29 +17,76 @@
 
 <body>
 
-<table class="=table" align="center">
-    <thead>
-        <tr> Navn </tr>
-        <tr>Alder </tr>
-        <tr>Trøjenummer </tr>
-        <tr>Position </tr>
-        <tr>Nationalitet </tr>
-    </thead>
 
-    <tbody>
+<div class="container">
 
-    <tr th:each="player: ${players}">
-        <td th:text="${player.getName()}"></td>
-        <td th:text="${player.getAge()}"></td>
-        <td th:text="${player.getId()}"></td>
-        <td th:text="${player.getPosition()}"></td>
-        <td th:text="${player.getNationality()}"></td>
+    <div class="card" style="width:200px">
 
-    </tr>
+        <img class="card-img-top" src="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/123336161_1822631301209706_7537053901773544148_o.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=FFsp6pdt5fkAX8CA6_7&_nc_ht=scontent-arn2-1.xx&oh=02312d88020b8fda132bcca1cc66ab3f&oe=5FF5775F" alt="Card image" style="width:100%">
+        <div class="card-body">
 
-    </tbody>
+            <tbody>
 
-</table>
+            <div class ="card">
+                <thead>
+                <tr> Navn: </tr>
+                </thead>
+
+                <tr th:each="player: ${players}">
+                    <td th:text="${player.getName()}"></td>
+                </tr>
+            </div>
+
+            <div class ="card">
+                <thead>
+                <tr>Alder: </tr>
+                </thead>
+
+                <tr th:each="player: ${players}">
+                    <td th:text="${player.getAge()}"></td>
+                </tr>
+            </div>
+
+            <div class ="card">
+                <thead>
+                <tr>Trøjenummer: </tr>
+                </thead>
+
+                <tr th:each="player: ${players}">
+                    <td th:text="${player.getId()}"></td>
+                </tr>
+            </div>
+
+            <div class ="card">
+                <thead>
+                <tr>Position: </tr>
+                </thead>
+
+                <tr th:each="player: ${players}">
+                    <td th:text="${player.getPosition()}"></td>
+                </tr>
+            </div>
+
+            <div class ="card">
+                <thead>
+                <tr>Nationalitet: </tr>
+                </thead>
+
+                <tr th:each="player: ${players}">
+                    <td th:text="${player.getNationality()}"></td>
+                </tr>
+            </div>
+
+            </tbody>
+
+
+        </div>
+    </div>
+    <br>
+
+
+</div>
+
 
 
 </body>

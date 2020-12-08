@@ -1,0 +1,23 @@
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <title>Adminstrer spillere</title>
+</head>
+<body>
+
+<div th:replace="header">...</div>
+
+<h2>Adminstrer spillere </h2>
+<form method="get" action="/addPlayer">
+    <button type="submit">Tilføj spiller</button>
+</form>
+<form method="get" action="/deletePlayer">
+    <button type="submit">Slet spiller</button>
+</form>
+<form method="get" action="/addItem">
+    <button type="submit">Opdater spillerinfo</button>
+</form>
+</body>
+</html>
