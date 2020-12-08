@@ -54,13 +54,13 @@ public class PlayerController {
         return "deletePlayer";
     }
 
-    @GetMapping("/verifyDelete")
+    @GetMapping("/verifyDeletePlayer")
     public String verifyDelete(@RequestParam("id") long id, Model model){
         model.addAttribute("player", playerRepository.findById(id));
-        return "verifyDelete";
+        return "verifyDeletePlayer";
     }
 
-    @PostMapping("/verifyDelete")
+    @PostMapping("/verifyDeletePlayer")
     public String verifyDelete(HttpServletRequest request){
         String id = request.getParameter("id");
         playerRepository.deleteById(Long.valueOf(id));

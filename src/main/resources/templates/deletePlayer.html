@@ -1,4 +1,4 @@
-
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
 <head>
     <meta charset="UTF-8">
@@ -18,16 +18,17 @@
     </tr>
     </thead>
 
-<tbody>
+    <tbody>
 
-    <tr th:each="player: ${players}">
-        <td th:text="${player.getId()}"></td>
-        <td th:text="${player.getName()}"></td>
-    </tr>
-    <td>
-        <a href="@{/verifyDelete(id=${player.getId()})}" class="btn btn-del">Slet</a>
-    </td>
-</tbody>
+        <tr th:each="player: ${players}">
+            <td th:text="${player.getId()}"></td>
+            <td th:text="${player.getName()}"></td>
+            <td>
+                <a th:href="@{/verifyDeletePlayer(id=${player.getId()})}" class="btn btn-del">Slet</a>
+            </td>
+        </tr>
+
+    </tbody>
 </table>
 
 </div>
