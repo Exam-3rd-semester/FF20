@@ -21,11 +21,8 @@ public class PlayerController {
 
     @GetMapping("/players")
     public String players(Model model){
-
         model.addAttribute("players", playerRepository.findAll());
-
         return"players";
-
     }
 
     @GetMapping("/addPlayer")

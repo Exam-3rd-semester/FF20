@@ -42,9 +42,7 @@ public class AdminController {
 
     @GetMapping("/logud")
     public String logout(HttpSession session) {
-
         session.removeAttribute("isLoggedIn");
-
         if (session.getAttribute("isLoggedIn") != null) {
             return "adminSide";
         }
@@ -53,8 +51,17 @@ public class AdminController {
 
     @GetMapping("/adminPlayer")
     public String adminPlayer(){
-
         return "adminPlayers";
+    }
+
+    @GetMapping("/adminShop")
+    public String adminShop(){
+        return "adminShop";
+    }
+
+    @GetMapping("/adminStaff")
+    public String adminStaff(){
+        return "adminStaff";
     }
 
 
