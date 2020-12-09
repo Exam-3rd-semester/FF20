@@ -15,6 +15,7 @@ public class PlayerController {
 
     private PlayerRepository playerRepository;
 
+
     public PlayerController(PlayerRepository playerRepository){
         this.playerRepository = playerRepository;
     }
@@ -22,7 +23,7 @@ public class PlayerController {
     @GetMapping("/players")
     public String players(Model model){
         model.addAttribute("players", playerRepository.findAll());
-        return"players";
+        return "players";
     }
 
     @GetMapping("/addPlayer")
